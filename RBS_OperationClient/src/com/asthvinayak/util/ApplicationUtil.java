@@ -1,4 +1,4 @@
-package com.asthivanayak.util;
+package com.asthvinayak.util;
 
 public class ApplicationUtil {
 

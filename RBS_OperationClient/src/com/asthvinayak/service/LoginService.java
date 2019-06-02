@@ -1,4 +1,4 @@
-package com.asthivanayak.service;
+package com.asthvinayak.service;
 
 public class LoginService {
 

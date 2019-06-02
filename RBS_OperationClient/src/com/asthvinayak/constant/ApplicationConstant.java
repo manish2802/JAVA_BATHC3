@@ -1,4 +1,4 @@
-package com.asthivanayak.constant;
+package com.asthvinayak.constant;
 
 public class ApplicationConstant {
 

@@ -1,4 +1,4 @@
-package com.asthivanayak.conroller;
+package com.asthvinayak.controller;
 
 public class LoginController {
 	
