@@ -13,10 +13,10 @@ import javax.servlet.http.HttpServletResponse;
  * Servlet implementation class LoginControllere
  */
 // @WebServlet("/login")
-public class LoginController extends HttpServlet {
+public class CardController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	public LoginController() {
+	public CardController() {
 		System.out.println("LoginController");
 	}
 
@@ -30,22 +30,7 @@ public class LoginController extends HttpServlet {
 		response.setContentType("text/html");
 		PrintWriter pw = response.getWriter();
 
-		System.out.println(request.getLocalAddr());
-		System.out.println(request.getQueryString());
-
-		String userName = request.getParameter("uname");
-		String password = request.getParameter("psw");
-
-		// call service layer
-
-		if ("manish".equals(userName) && "1234".equals(password)) {
-
-			RequestDispatcher rd = request.getRequestDispatcher("html/home.html");
-			rd.forward(request, response);
-
-		}
-
-		System.out.println(userName + "  " + password);
+		pw.write("Card");
 
 	}
 
