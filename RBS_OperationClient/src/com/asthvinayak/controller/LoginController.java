@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.asthvinayak.dao.LogingDAO;
+
 /**
  * Servlet implementation class LoginControllere
  */
@@ -37,10 +39,11 @@ public class LoginController extends HttpServlet {
 		String password = request.getParameter("psw");
 
 		// call service layer
+		LogingDAO ld = LogingDAO.getInstance();
+		boolean b = ld.getLogin(userName, password);
+		if (b) {
 
-		if ("manish".equals(userName) && "1234".equals(password)) {
-
-			RequestDispatcher rd = request.getRequestDispatcher("html/home.html");
+			RequestDispatcher rd = request.getRequestDispatcher("/resources/html/home.html");
 			rd.forward(request, response);
 
 		}
